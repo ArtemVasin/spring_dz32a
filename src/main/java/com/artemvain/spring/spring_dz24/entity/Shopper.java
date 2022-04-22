@@ -1,4 +1,4 @@
-package com.artemvain.spring.spring_dz23.entity;
+package com.artemvain.spring.spring_dz24.entity;
 
 import lombok.Getter;
 import lombok.Setter;

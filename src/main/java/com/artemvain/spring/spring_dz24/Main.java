@@ -1,6 +1,6 @@
-package com.artemvain.spring.spring_dz23;
+package com.artemvain.spring.spring_dz24;
 
-import com.artemvain.spring.spring_dz23.entity.*;
+import com.artemvain.spring.spring_dz24.entity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -11,6 +11,7 @@ public class Main {
                 .addAnnotatedClass(BookWarehouse.class).addAnnotatedClass(Author.class).
                 addAnnotatedClass(OrderBook.class).addAnnotatedClass(OrderDetails.class).addAnnotatedClass(Shopper.class).buildSessionFactory();
         Session session = null;
+
         try {
 
             session = factory.getCurrentSession(); //открываем сессию
@@ -23,10 +24,8 @@ public class Main {
 
 
             session.beginTransaction();           // начинаем транзакцию
-
-            System.out.println(bookWarehouse);
-            System.out.println(book);
-
+            //    System.out.println(bookWarehouse);
+            //    System.out.println(book);
             session.save(bookWarehouse);
             session.save(orderDetails);
             session.save(shopper);
