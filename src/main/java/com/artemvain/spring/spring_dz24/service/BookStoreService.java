@@ -12,4 +12,5 @@ public interface BookStoreService {
     public BookWarehouse getBook(int id);
 
     public void deleteBookWarehouse(int id);
+
 }

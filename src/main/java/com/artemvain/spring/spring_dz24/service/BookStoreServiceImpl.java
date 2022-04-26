@@ -3,10 +3,11 @@ package com.artemvain.spring.spring_dz24.service;
 import com.artemvain.spring.spring_dz24.dao.BookStoreRepository;
 import com.artemvain.spring.spring_dz24.entity.BookWarehouse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class BookStoreServiceImpl implements BookStoreService {
 
     @Autowired
@@ -36,4 +37,6 @@ public class BookStoreServiceImpl implements BookStoreService {
     public void deleteBookWarehouse(int id) {
         bookStoreRepository.deleteById(id);
     }
+
+
 }

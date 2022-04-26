@@ -1,6 +1,7 @@
 package com.artemvain.spring.spring_dz24.service;
 
 import com.artemvain.spring.spring_dz24.entity.Book;
+import com.artemvain.spring.spring_dz24.entity.Shopper;
 
 import java.util.List;
 
@@ -14,4 +15,6 @@ public interface BookService {
 
     public void deleteBook(int id);
 
+
+    public void addOrder(int id, Shopper shopper, int count);
 }
