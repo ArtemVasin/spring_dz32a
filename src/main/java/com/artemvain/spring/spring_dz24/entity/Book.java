@@ -35,6 +35,9 @@ public class Book {
     @OneToOne (mappedBy = "book")
     private  BookWarehouse bookWarehouse;
 
+    @Version
+    int version;
+
     @Override
     public String toString() {
         return "Book{" +

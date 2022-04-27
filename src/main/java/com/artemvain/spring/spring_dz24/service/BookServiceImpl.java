@@ -6,8 +6,10 @@ import com.artemvain.spring.spring_dz24.entity.Book;
 import com.artemvain.spring.spring_dz24.entity.BookWarehouse;
 import com.artemvain.spring.spring_dz24.entity.Shopper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Lock;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.LockModeType;
 import java.util.List;
 import java.util.Optional;
 
@@ -42,7 +44,7 @@ public class BookServiceImpl implements BookService {
         bookRepository.deleteById(id);
     }
 
-
+@Lock(LockModeType.WRITE)
     public void addOrder(int id, Shopper shopper, int count) {
         BookWarehouse bookWarehouse = new BookWarehouse(1, new Book("Onegin", new Author("Alisa"), 1865, 100, 800));
         System.out.println("1111111  " + bookRepository.findById(id));
