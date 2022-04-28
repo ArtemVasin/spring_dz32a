@@ -32,11 +32,10 @@ public class Book {
     @Column(name = "price")
     private int price;
 
-    @OneToOne (mappedBy = "book")
-    private  BookWarehouse bookWarehouse;
 
-    @Version
-    int version;
+    @OneToOne(mappedBy = "book")
+    private BookWarehouse bookWarehouse;
+
 
     @Override
     public String toString() {

@@ -12,7 +12,10 @@ import javax.persistence.*;
 public class BookWarehouse {
 
     @Id
-    @Column(name = "number_of_books")
+    @Column(name = "id")
+    private int id;
+
+    @Column(name = "count_of_books")
     private int numberOfBooks;
 
 
@@ -23,7 +26,7 @@ public class BookWarehouse {
     @Override
     public String toString() {
         return "BookWarehouse{" +
-                "numberOfBooks=" + numberOfBooks +
+                "countOfBooks=" + numberOfBooks +
                 ", book=" + book +
                 '}';
     }

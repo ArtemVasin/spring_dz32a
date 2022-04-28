@@ -41,10 +41,11 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public void deleteBook(int id) {
+
         bookRepository.deleteById(id);
     }
 
-@Lock(LockModeType.WRITE)
+//@Lock(LockModeType.WRITE)
     public void addOrder(int id, Shopper shopper, int count) {
         BookWarehouse bookWarehouse = new BookWarehouse(1, new Book("Onegin", new Author("Alisa"), 1865, 100, 800));
         System.out.println("1111111  " + bookRepository.findById(id));
@@ -56,6 +57,11 @@ public class BookServiceImpl implements BookService {
 
 
     }
+//
+//    public void deleteBooks() {
+//
+//        bookRepository.deleteAll();
+//    }
 
 }
 

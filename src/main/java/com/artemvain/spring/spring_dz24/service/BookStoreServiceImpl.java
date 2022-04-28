@@ -15,6 +15,7 @@ public class BookStoreServiceImpl implements BookStoreService {
 
     @Override
     public List<BookWarehouse> getAllBookWarehouse() {
+
         return bookStoreRepository.findAll();
     }
 
@@ -30,7 +31,7 @@ public class BookStoreServiceImpl implements BookStoreService {
         if (optional.isPresent()) {
             bookWarehouse = optional.get();
         }
-        return bookWarehouse;
+        return   bookWarehouse;
     }
 
     @Override
