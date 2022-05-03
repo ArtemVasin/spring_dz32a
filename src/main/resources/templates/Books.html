@@ -4,7 +4,7 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Default title for my pages</title>
+<!--    <title>Default title for my pages</title>-->
 
 </head>
 
@@ -23,7 +23,7 @@
         <tr th:each="book : ${books}">
             <td><span th:text="${book.getBook().getName()}"></span></td>
             <td><span th:text="${book.getBook().getAuthor()}"></span></td>
-            <td><span th:text="${book.getBook().getPrice()}"></span></td>
+            <span th:text="${book.getBook().getPrice()}"></span>
 
         </tr>
         </tbody>

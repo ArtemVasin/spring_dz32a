@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+</head>
+
+<body>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th> Id</th>
+            <th> Name</th>
+            <th> Email</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="users : ${user}">
+            <td><span th:text="${users.getId()}"></span></td>
+            <td><span th:text="${users.getName()}"></span></td>
+            <td><span th:text="${users.getEmail()}"></span></td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<br/>
+<hr/>
+
+<a href="/api/v1/new">Create new user</a>
+
+<br/>
+
+
+</body>
+
+</html>
