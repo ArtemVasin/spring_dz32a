@@ -41,7 +41,7 @@ public class UserController {
 
     @GetMapping({"/welcome"})
     public String welcome() {
-        String w = "HELLO!!! WELCOME!!!";
+        String w = "WELCOME!";
         return w;
     }
 
