@@ -1,17 +1,8 @@
 package com.artemvain.spring.spring_dz24;
 
-import com.artemvain.spring.spring_dz24.controllers.BookStoreController;
-import com.artemvain.spring.spring_dz24.entity.*;
-import com.artemvain.spring.spring_dz24.service.AuthorServiceImpl;
-import com.artemvain.spring.spring_dz24.service.BookServiceImpl;
-
-import com.artemvain.spring.spring_dz24.service.BookStoreServiceImpl;
-import com.artemvain.spring.spring_dz24.service.OrderServiceImpl;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ConfigurableApplicationContext;
-
-import java.util.List;
 
 @SpringBootApplication
 public class Spring24Application {
